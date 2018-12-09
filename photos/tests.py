@@ -9,6 +9,6 @@ class PhotographerTestClass(TestCase):
     def setUp(self):
         self.stacy = Photographer(first_name = 'Stacy', last_name = 'Chebet', email = 'staceychebet23@gmail.com')
 
-    # #Testing instance
-    # def test_instance(self):
-    #     self.assertTrue(isinstance(self.stacy,Photographer))
+    #Testing instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.stacy,Photographer))
