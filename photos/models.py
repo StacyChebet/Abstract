@@ -18,8 +18,11 @@ class Photographer(models.Model):
 class Image(models.Model):
     image = models.ImageField(upload_to = 'pictures/')
     title = models.CharField(max_length = 60)
-    description = models.CharField()
-    image_location = models.ForeignKey(Location)
-    image_category = models.ForeignKey(Category)
+    description = models.CharField(max_length = 200)
+    # image_location = models.ForeignKey(Location)
+    # image_category = models.ForeignKey(Category)
+
+class Location(models.Model):
+    location = models.CharField(max_length = 60)
 
     
