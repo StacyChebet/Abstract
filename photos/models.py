@@ -15,6 +15,11 @@ class Photographer(models.Model):
     def save_photographer(self):
         self.save()
 
-    
+class Image(models.Model):
+    image = models.ImageField(upload_to = 'pictures/')
+    title = models.CharField(max_length = 60)
+    description = models.CharField()
+    image_location = models.ForeignKey(Location)
+    image_category = models.ForeignKey(Category)
 
     
