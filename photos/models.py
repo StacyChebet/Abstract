@@ -16,11 +16,23 @@ class Photographer(models.Model):
 class Location(models.Model):
     location = models.CharField(max_length = 40)
 
+    def __str__(self):
+        return self.location
+
+class Category(models.Model):
+    category = models.CharField(max_length = 40)
+
+    def __str__(self):
+        return self.category
+
 class Image(models.Model):
     image = models.ImageField(upload_to = 'pictures/')
     name = models.CharField(max_length = 30)
     description = models.CharField(max_length = 150)
     image_location = models.ForeignKey(Location)
+
+    def __str__(self):
+        return self.name
 
 
 
