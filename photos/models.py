@@ -18,6 +18,8 @@ class Image(models.Model):
     name = models.CharField(max_length = 30)
     description = models.CharField(max_length = 150)
 
+class Location(models.Model):
+    location = models.CharField(max_length = 40)
 
 
 
