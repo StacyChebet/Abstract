@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'abstract.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'abstract',
+        'NAME': 'photos',
         'USER': 'stacy',
         'PASSWORD': 'stacy',
     }
