@@ -13,6 +13,11 @@ class Photographer(models.Model):
     def save_photographer(self):
         self.save()
 
+class Image(models.Model):
+    image = models.ImageField(upload_to = 'pictures/')
+    name = models.CharField(max_length = 30)
+    description = models.CharField(max_length = 150)
+
 
 
 
