@@ -13,13 +13,16 @@ class Photographer(models.Model):
     def save_photographer(self):
         self.save()
 
+class Location(models.Model):
+    location = models.CharField(max_length = 40)
+
 class Image(models.Model):
     image = models.ImageField(upload_to = 'pictures/')
     name = models.CharField(max_length = 30)
     description = models.CharField(max_length = 150)
+    image_location = models.ForeignKey(Location)
 
-class Location(models.Model):
-    location = models.CharField(max_length = 40)
+
 
 
 
