@@ -6,3 +6,28 @@ from . import views
 urlpatterns = [
     url(r'^$', views.all_photos, name="all_photos"),
 ]
+
+if settings.DEBUG:
+    urlpatterns+= static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
