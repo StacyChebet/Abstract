@@ -1,0 +1,40 @@
+{% load bootstrap3 %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="uf-8">
+   
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+    {% endblock %}
+
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="{% url 'all_photos' %}">ABSTRACT</a>
+            </div>
+            <!--Adding a search form-->
+             <div class="col-sm-4 col-md-4 navbar-right">
+                 <form>
+                     
+                 </form>
+            </div> 
+            <!--Search form end-->
+        </div>
+    </nav>
+
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
+</body>
+
+</html>

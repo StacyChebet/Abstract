@@ -1,0 +1,44 @@
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<div class="container">
+    <!--Looping through news-->
+    <div class="row">
+        {% for image in images %}
+        <div class="col-xs-6 col-sm-4 col-md-4 col-lg-4">
+            
+            <img src="{{image.image.url}}" id = "pic" class="img-responsive" alt="Image" data-toggle="modal" data-target="#myModal">
+            <!-- Trigger the modal by clicking the image -->
+            
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+            
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">{{image.name}}</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{image.image.url}}" id="pic" class="img-responsive" alt="Image" data-toggle="modal" data-target="#myModal">
+                            <p>{{image.description}}</p>
+                            <p>{{image.image_category}}</p>
+                            <p>Taken at: <b>{{image.image_location}}</b></p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Go Back</button>
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+
+        </div>
+        {% endfor %}
+    </div>
+
+</div>
+{% endblock %}

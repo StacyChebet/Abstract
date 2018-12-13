@@ -1,0 +1,17 @@
+/* font-family: 'Hanalei Fill', cursive;
+font-family: 'Bungee Inline', cursive;
+font-family: 'Playball', cursive;
+font-family: 'Cabin Sketch', cursive;
+font-family: 'Fontdiner Swanky', cursive;
+font-family: 'Codystar', cursive;
+font-family: 'Nosifer', cursive; */
+
+body {
+    background: black;
+}
+
+#pic {
+    width: 500px;
+    height: 350px;
+    margin-bottom: 30px;
+}
